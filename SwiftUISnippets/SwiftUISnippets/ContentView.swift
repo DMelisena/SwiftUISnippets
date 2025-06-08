@@ -2,7 +2,7 @@ import Inject
 import SwiftUI
 
 struct ContentView: View {
-    @ObservedObject private var io = Inject.observer // swiftlint:disable:this identifier_name
+    @ObservedObject private var io = Inject.observer
 
     var body: some View {
         VStack {
