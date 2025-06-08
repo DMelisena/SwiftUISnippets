@@ -13,7 +13,7 @@ struct ContentView: View {
                 .imageScale(.large)
                 .foregroundStyle(.black)
 
-            Text("test")
+            Text("teset")
                 .font(.largeTitle)
                 .fontDesign(.rounded)
                 .fontWeight(.bold)

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		16F7501A2DF5F52F00BC5DA0 /* XcodebuildNvimPreview in Frameworks */ = {isa = PBXBuildFile; productRef = 16F750192DF5F52F00BC5DA0 /* XcodebuildNvimPreview */; };
 		96B8EE2E2B031D6300892BE1 /* hotreloadApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B8EE2D2B031D6300892BE1 /* hotreloadApp.swift */; };
 		96B8EE302B031D6300892BE1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B8EE2F2B031D6300892BE1 /* ContentView.swift */; };
 		96B8EE322B031D6400892BE1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 96B8EE312B031D6400892BE1 /* Assets.xcassets */; };
@@ -27,6 +28,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				16F7501A2DF5F52F00BC5DA0 /* XcodebuildNvimPreview in Frameworks */,
 				96B8EE452B03265500892BE1 /* Inject in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -87,6 +89,7 @@
 			name = SwiftUISnippets;
 			packageProductDependencies = (
 				96B8EE442B03265500892BE1 /* Inject */,
+				16F750192DF5F52F00BC5DA0 /* XcodebuildNvimPreview */,
 			);
 			productName = hotreload;
 			productReference = 96B8EE2A2B031D6300892BE1 /* SwiftUISnippets.app */;
@@ -118,6 +121,7 @@
 			mainGroup = 96B8EE212B031D6300892BE1;
 			packageReferences = (
 				96B8EE432B03265500892BE1 /* XCRemoteSwiftPackageReference "Inject" */,
+				16F750182DF5F52F00BC5DA0 /* XCRemoteSwiftPackageReference "xcodebuild-nvim-preview" */,
 			);
 			productRefGroup = 96B8EE2B2B031D6300892BE1 /* Products */;
 			projectDirPath = "";
@@ -376,6 +380,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		16F750182DF5F52F00BC5DA0 /* XCRemoteSwiftPackageReference "xcodebuild-nvim-preview" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/wojciech-kulik/xcodebuild-nvim-preview.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.10;
+			};
+		};
 		96B8EE432B03265500892BE1 /* XCRemoteSwiftPackageReference "Inject" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/krzysztofzablocki/Inject.git";
@@ -387,6 +399,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		16F750192DF5F52F00BC5DA0 /* XcodebuildNvimPreview */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 16F750182DF5F52F00BC5DA0 /* XCRemoteSwiftPackageReference "xcodebuild-nvim-preview" */;
+			productName = XcodebuildNvimPreview;
+		};
 		96B8EE442B03265500892BE1 /* Inject */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 96B8EE432B03265500892BE1 /* XCRemoteSwiftPackageReference "Inject" */;
