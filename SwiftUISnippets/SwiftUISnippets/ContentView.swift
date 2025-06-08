@@ -2,7 +2,7 @@ import Inject
 import SwiftUI
 
 struct ContentView: View {
-    @ObservedObject private var iO = Inject.observer
+    @ObservedObject private var io = Inject.observer // swiftlint:disable:this identifier_name
 
     var body: some View {
         VStack {
@@ -13,7 +13,7 @@ struct ContentView: View {
                 .imageScale(.large)
                 .foregroundStyle(.black)
 
-            Text("Testing")
+            Text("test")
                 .font(.largeTitle)
                 .fontDesign(.rounded)
                 .fontWeight(.bold)
