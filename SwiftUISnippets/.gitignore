@@ -1,0 +1,3 @@
+.nvim/xcodebuild/*.log
+.nvim/xcodebuild/*.json
+.nvim/xcodebuild/build.xcresult/*
