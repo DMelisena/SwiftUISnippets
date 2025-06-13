@@ -1,14 +1,18 @@
-import SwiftUI
+
+@_exported import Inject
+@_exported import SwiftUI
+
 import XcodebuildNvimPreview //: ignore
 
-// @_exported import Inject
-
 @main
-struct SwiftUISnippets: App {
+struct SwiftUISnippetsApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
-                .setupNvimPreview { ContentView() }
         }
     }
+}
+
+#Preview {
+    ContentView()
 }

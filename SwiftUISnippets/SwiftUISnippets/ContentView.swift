@@ -1,28 +1,25 @@
-import Inject
 import SwiftUI
 
 struct ContentView: View {
     @ObservedObject private var io = Inject.observer
-
+    @State var showingFirstSheet : Bool = false
+    @State var StateColorRed: Bool = false
     var body: some View {
-        VStack {
-            Image(systemName: "apple.logo")
-                .resizable()
-                .aspectRatio(contentMode: .fit)
-                .frame(width: 100, height: 100)
-                .imageScale(.large)
-                .foregroundStyle(.black)
-
-            Text("teset")
-                .font(.largeTitle)
-                .fontDesign(.rounded)
-                .fontWeight(.bold)
+        GeometryReader { geometry in
+            VStack (spacing:0){
+//                firstPart(colorRed: $StateColorRed)
+                firstPart(colorRed: $StateColorRed)
+                    .frame(width: geometry.size.width, height: geometry.size.height / 2)
+                thirdPart()
+                    .frame(width: geometry.size.width, height: geometry.size.height / 4)
+                fourthPart()
+                    .frame(width: geometry.size.width, height: geometry.size.height / 4)
+            }
         }
-        .padding()
         .enableInjection()
     }
 }
 
-// #Preview {
-//    ContentView()
-// }
+#Preview {
+    ContentView()
+}
